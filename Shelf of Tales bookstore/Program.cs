@@ -9,6 +9,8 @@ builder.Services.AddDbContext<Shelf_of_Tales_bookstoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Shelf_of_Tales_bookstoreContext") ?? throw new InvalidOperationException("Connection string 'Shelf_of_Tales_bookstoreContext' not found.")));
 
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

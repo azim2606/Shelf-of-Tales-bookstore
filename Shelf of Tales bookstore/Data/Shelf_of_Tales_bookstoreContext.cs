@@ -14,6 +14,6 @@ namespace Shelf_of_Tales_bookstore.Data
         {
         }
 
-        public DbSet<Shelf_of_Tales_bookstore.Models.Shops> Shops { get; set; } = default!;
+        public DbSet<Shelf_of_Tales_bookstore.Models.Book> Book { get; set; } = default!;
     }
 }
