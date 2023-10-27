@@ -5,6 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<ApplicationUserContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ApplicationUserContext") ?? throw new InvalidOperationException("Connection string 'ApplicationUserContext' not found.")));
 builder.Services.AddDbContext<Shelf_of_Tales_bookstoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Shelf_of_Tales_bookstoreContext") ?? throw new InvalidOperationException("Connection string 'Shelf_of_Tales_bookstoreContext' not found.")));
 

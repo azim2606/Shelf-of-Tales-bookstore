@@ -1,0 +1,50 @@
+﻿@page
+@model Shelf_of_Tales_bookstore.Pages.Account.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Registration</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Registration.ID" class="control-label"></label>
+                <input asp-for="Registration.ID" class="form-control" />
+                <span asp-validation-for="Registration.ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Registration.Email" class="control-label"></label>
+                <input asp-for="Registration.Email" class="form-control" />
+                <span asp-validation-for="Registration.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Registration.Password" class="control-label"></label>
+                <input asp-for="Registration.Password" class="form-control" />
+                <span asp-validation-for="Registration.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Registration.ConfirmPassword" class="control-label"></label>
+                <input asp-for="Registration.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Registration.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
