@@ -4,9 +4,6 @@ namespace Shelf_of_Tales_bookstore.Models
 {
     public class Registration
     {
-        
-        public string ID { get; set; }
-
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
