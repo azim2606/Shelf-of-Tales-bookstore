@@ -14,6 +14,6 @@ namespace Shelf_of_Tales_bookstore.Data
         {
         }
 
-        public DbSet<Shelf_of_Tales_bookstore.Models.Registration> Registration { get; set; } = default!;
+        
     }
 }
